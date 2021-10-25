@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		309F8DD627272E230091CBA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 309F8DD527272E230091CBA1 /* main.m */; };
+		309F8DDC2727618E0091CBA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 309F8DDB2727618E0091CBA1 /* main.m */; };
+		309F8DDE272761B70091CBA1 /* game.c in Sources */ = {isa = PBXBuildFile; fileRef = 309F8DDD272761B70091CBA1 /* game.c */; };
+		309F8DE32727632A0091CBA1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309F8DE22727632A0091CBA1 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		309F8DBF27272DBC0091CBA1 /* cross-platformer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cross-platformer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		309F8DD527272E230091CBA1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/macos/main.m; sourceTree = "<group>"; };
+		309F8DDB2727618E0091CBA1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		309F8DDD272761B70091CBA1 /* game.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = game.c; sourceTree = "<group>"; };
+		309F8DDF272761D70091CBA1 /* game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = game.h; sourceTree = "<group>"; };
+		309F8DE22727632A0091CBA1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -20,6 +25,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				309F8DE32727632A0091CBA1 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -29,8 +35,9 @@
 		309F8DB627272DBC0091CBA1 = {
 			isa = PBXGroup;
 			children = (
-				309F8DD527272E230091CBA1 /* main.m */,
+				309F8DD92727618E0091CBA1 /* src */,
 				309F8DC027272DBC0091CBA1 /* Products */,
+				309F8DE12727632A0091CBA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -40,6 +47,32 @@
 				309F8DBF27272DBC0091CBA1 /* cross-platformer.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		309F8DD92727618E0091CBA1 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				309F8DDD272761B70091CBA1 /* game.c */,
+				309F8DDF272761D70091CBA1 /* game.h */,
+				309F8DDA2727618E0091CBA1 /* macos */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		309F8DDA2727618E0091CBA1 /* macos */ = {
+			isa = PBXGroup;
+			children = (
+				309F8DDB2727618E0091CBA1 /* main.m */,
+			);
+			path = macos;
+			sourceTree = "<group>";
+		};
+		309F8DE12727632A0091CBA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				309F8DE22727632A0091CBA1 /* Cocoa.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,7 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				309F8DD627272E230091CBA1 /* main.m in Sources */,
+				309F8DDC2727618E0091CBA1 /* main.m in Sources */,
+				309F8DDE272761B70091CBA1 /* game.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
