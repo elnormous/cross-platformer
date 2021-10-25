@@ -10,6 +10,7 @@
 		309F8DDC2727618E0091CBA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 309F8DDB2727618E0091CBA1 /* main.m */; };
 		309F8DDE272761B70091CBA1 /* game.c in Sources */ = {isa = PBXBuildFile; fileRef = 309F8DDD272761B70091CBA1 /* game.c */; };
 		309F8DE32727632A0091CBA1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309F8DE22727632A0091CBA1 /* Cocoa.framework */; };
+		309F8E2C27276D8D0091CBA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309F8E2A27276D8D0091CBA1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,8 @@
 		309F8DDD272761B70091CBA1 /* game.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = game.c; sourceTree = "<group>"; };
 		309F8DDF272761D70091CBA1 /* game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = game.h; sourceTree = "<group>"; };
 		309F8DE22727632A0091CBA1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		309F8E2A27276D8D0091CBA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = macos/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		309F8E2B27276D8D0091CBA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = macos/Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 		309F8DDA2727618E0091CBA1 /* macos */ = {
 			isa = PBXGroup;
 			children = (
+				309F8E2A27276D8D0091CBA1 /* Assets.xcassets */,
+				309F8E2B27276D8D0091CBA1 /* Info.plist */,
 				309F8DDB2727618E0091CBA1 /* main.m */,
 			);
 			path = macos;
@@ -132,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				309F8E2C27276D8D0091CBA1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,12 +293,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "cross-platformer/cross_platformer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = macos/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -300,6 +304,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "lv.elviss.cross-platformer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -311,12 +316,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "cross-platformer/cross_platformer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = macos/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -324,6 +327,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "lv.elviss.cross-platformer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
