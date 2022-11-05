@@ -111,7 +111,8 @@ static void initWindow(void)
     window.delegate = windowDelegate;
 
     [window setCollectionBehavior:NSWindowCollectionBehaviorFullScreenPrimary];
-    [window setTitle:@"Cross Platformer"];
+    NSString* bundleName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"];
+    [window setTitle:bundleName];
 
     NSRect windowFrame = [NSWindow contentRectForFrameRect:[window frame]
                                                  styleMask:[window styleMask]];
